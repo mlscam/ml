@@ -1,7 +1,12 @@
 import pandas as pd
 import numpy as np
 
-dataset= pd.read_csv('3.kdata.csv')
+
+
+data = [[2, 4,"neg"], [4,6,"neg"], [4,4,"pos"],[4,2,"neg"],[6,4,"neg"],[6,2,"pos"]]
+  
+# Create the pandas DataFrame
+dataset = pd.DataFrame(data, columns = ['x', 'y','class'])
 
 x=dataset.iloc[:,:-1]
 y=dataset.iloc[:,2].values
